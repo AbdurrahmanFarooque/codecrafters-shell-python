@@ -2,11 +2,14 @@ import sys
 
 
 def main():
-    while True:
+    exit = False
+    while not exit:
         sys.stdout.write("$ ")
         command = input()
-        print(f'{command}: command not found')
-        pass
+        if command == 'exit':
+            exit = True
+        else:
+            print(f'{command}: command not found')
 
 
 if __name__ == "__main__":
